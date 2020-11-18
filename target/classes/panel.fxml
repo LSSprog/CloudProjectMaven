@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="center" xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="cloud.project.java.file.manager.PanelController">
+
+    <HBox>
+        <ComboBox fx:id="boxOfDisk" onAction="#changeDiskAction"/>
+        <TextField fx:id="pathField" editable="false" HBox.hgrow="ALWAYS" />
+        <Button text="На верхнюю папку" onAction="#btnPathUpAction" />
+    </HBox>
+    <TableView fx:id="fileList" VBox.vgrow="ALWAYS" />
+
+    <properties>
+        <controller>
+            <fx:reference source="controller"/>
+        </controller>
+    </properties>
+
+</VBox>
